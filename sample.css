@@ -1,0 +1,424 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align:center;
+}
+
+/* Header Styling */
+header {
+    width: 97%;
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    width: 97%;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: #444;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f9b2ff;
+    transform: scale(1.2);
+}
+.center-text{
+    color: white;
+}
+
+/* Section Styling (Uniform Width) */
+section {
+    width: 97%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #d1768d, #adeaee);
+}
+
+h1,h2,h3{
+    color: #444;
+}
+/* Education Section */
+#education {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #d1768d, #adeaee);
+    color: white;
+}
+
+/* Container for Education Cards */
+.education-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+.education-container strong{
+    color: #666;
+}
+/* Individual Education Cards */
+.education-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.education-card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+tr:hover {
+    background-color: #e6e6e6;
+    transition: background-color 0.3s ease-in-out;
+}
+/* Footer Styling */
+footer {
+    width: 98.5%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
+#personal-details {
+    max-width: 1250px; /* Increased width */
+    margin: 30px auto 30px auto; /* Added space above */
+    padding: 50px 40px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Personal Details Content */
+.personal-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the boxes */
+    gap: 20px;
+    padding-top: 20px;
+}
+
+/* Individual text box styling */
+.personal-box {
+    flex: 1 1 calc(50% - 20px); /* Each box takes half width */
+    background: rgba(255, 202, 202, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 18px;
+    min-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    color: rgb(255, 255, 255);
+}
+.personal-box strong{
+    color: rgb(240, 100, 123);
+}
+.personal-box:hover {
+    transform: scale(1.05);
+    background-color: #acacac;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .personal-box {
+        flex: 1 1 100%; /* Make them full width on smaller screens */
+    }
+}
+
+/* About & Career Section Styling */
+#about-career {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #d1768d, #adeaee);
+    color: white;
+    position: relative;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Diagonal Layout using Grid */
+.about-career-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+/* About Me Box */
+.about-box {
+    background: rgba(230, 7, 156, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    color:rgb(245, 245, 245);
+    /* transform: rotate(-5deg);  Slight tilt */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Career Goal Box */
+.career-box {
+    background: rgba(230, 7, 156, 0.2);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    /* transform: rotate(5deg);  Opposite tilt */
+    animation: slideInRight 1.5s ease-in-out;
+}
+
+/* Adjust heading colors */
+.about-box h3, .career-box h3 {
+    color:#666;;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-career-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-box, .career-box {
+        transform: rotate(0deg);  /* Remove tilt on small screens */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hover Effect */
+#personal-details tr:hover {
+    background-color: #e6e6e6;
+    transition: background-color 0.3s ease-in-out;
+}
+/* skills */
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #d1768d, #adeaee);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1300px;
+    margin: auto;
+}
+
+#skills h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+#skills h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff6b6b;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+#skills li {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#skills li:hover {
+    transform: scale(1.03);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #skills {
+        padding: 30px 15px;
+    }
+    
+    #skills h2 {
+        font-size: 28px;
+    }
+
+    #skills li {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+/* projects */
+#projects{
+    font-size:x-large;
+}
+
+/* contact section */
+#cont{
+    background: linear-gradient(to right, #d1768d, #adeaee);
+}
+.container{
+    padding: 10px 3%;
+}
+.contact-left{
+    flex-basis: 30%;
+}
+.contact-right{
+    flex-basis: 50%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top:30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #555151;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #9e9797;
+    transition:background 0.5px;
+}
+.btn:hover{
+    background: #ff004f;
+
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 16px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
